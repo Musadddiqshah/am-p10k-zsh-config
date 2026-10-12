@@ -1,0 +1,4 @@
+# AM Powerlevel10k - Zsh example configuration
+
+# Load Powerlevel10k configuration
+[[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
