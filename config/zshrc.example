@@ -1,4 +1,66 @@
-# AM Powerlevel10k - Zsh example configuration
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# Load Powerlevel10k configuration
-[[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# ==================================
+# AM | Zsh Configuration
+# Bash and Fish configs untouched
+# ==================================
+
+export EDITOR=nvim
+export VISUAL=nvim
+export TERMUX_HOME="$HOME"
+
+# Colors
+autoload -Uz colors && colors
+
+# Useful aliases
+alias ll='ls -lah'
+alias la='ls -A'
+alias c='clear'
+alias v='nvim'
+alias zconf='nvim ~/.zshrc'
+alias reload='source ~/.zshrc'
+
+# Completion
+autoload -Uz compinit
+compinit
+
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=5000
+SAVEHIST=5000
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+
+# Prompt
+PROMPT='%F{cyan}󰀄 AM%f%F{green} ❯%f '
+
+
+# AM: Zsh Plugins
+source "$HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Powerlevel10k
+source "$HOME/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme"
+
+# Load personal prompt settings
+[[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# AM custom prompt segment
+POWERLEVEL9K_CUSTOM_AM='echo "󰀄 𝙰𝙼"'
+# AM segment: gray background
+
+# AM: match the prompt's dark background
+POWERLEVEL9K_CUSTOM_AM_BACKGROUND=234
+POWERLEVEL9K_CUSTOM_AM_FOREGROUND=39
+
+
+
+
