@@ -32,9 +32,12 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # AM branding segment
+  # AM branding segment (customizable)
   function prompt_custom_am() {
-    p10k segment -f 39 -t '󰀄 AM'
+    local name="${AM_PROMPT_NAME:-AM}"
+    local icon="${AM_PROMPT_ICON:-󰀄}"
+    local color="${AM_PROMPT_COLOR:-39}"
+    p10k segment -f "$color" -t "${icon} ${name}"
   }
 
   # The list of segments shown on the left. Fill it with the most important segments.
