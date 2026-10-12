@@ -1,24 +1,31 @@
-AM-P10K-ZSH-Config
+# AM-P10K-ZSH-Config
 
-A clean Powerlevel10k prompt for Zsh and Termux.
+A clean, customizable Powerlevel10k configuration for Zsh and Termux.
 
-Features
-
-- Custom AM branding
-- Nerd Font icons
-- Customizable prompt colors
-- Two-line terminal layout
-
-Requirements
+## Requirements
 
 - Zsh
 - Powerlevel10k
-- Nerd Font
+- A Nerd Font
 
-Customization
+## Configuration
 
-Edit your Powerlevel10k configuration to change the name, icons, and colors.
+Edit `config/am-settings.zsh`:
 
-Author
+```zsh
+AM_PROMPT_NAME="𝙰𝙼"
+AM_PROMPT_ICON="󰀄"
+AM_PROMPT_COLOR=2
+```
+
+Color examples: `2` green, `4` blue, `5` magenta, `6` cyan.
+
+## Installation
+
+Clone the repository and follow the installation instructions in `install.sh`.
+
+**Important:** Back up your existing Powerlevel10k configuration before replacing it.
+
+## Author
 
 AM

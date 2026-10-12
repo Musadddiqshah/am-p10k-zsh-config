@@ -1,15 +1,9 @@
-# ╭──────────────────────────────╮
-# │      AM PROMPT SETTINGS      │
-# ╰──────────────────────────────╯
+# AM Powerlevel10k customization
+# Change these values to customize your prompt.
 
-# Change your prompt name
-AM_PROMPT_NAME="AM"
-
-# Change your Nerd Font icon
+AM_PROMPT_NAME="𝙰𝙼"
 AM_PROMPT_ICON="󰀄"
+AM_PROMPT_COLOR=2
 
-# Prompt color: 2=green, 4=blue, 5=magenta, 6=cyan
-AM_PROMPT_COLOR=39
-
-# Display format
-AM_PROMPT_TEXT="${AM_PROMPT_ICON} ${AM_PROMPT_NAME}"
+# Green Linux icon
+typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=$AM_PROMPT_COLOR
