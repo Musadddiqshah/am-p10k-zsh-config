@@ -54,7 +54,7 @@ source "$HOME/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # AM custom prompt segment
-POWERLEVEL9K_CUSTOM_AM='echo "󰀄 𝙰𝙼"'
+POWERLEVEL9K_CUSTOM_AM='echo "󰀄 𝙰𝙼"' # Change AM to Your Name
 # AM segment: gray background
 
 # AM: match the prompt's dark background
