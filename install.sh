@@ -39,6 +39,12 @@ if [[ -f "$SETTINGS" ]]; then
   mkdir -p "$HOME/.config/am-p10k-zsh-config"
   cp "$SETTINGS" "$HOME/.config/am-p10k-zsh-config/am-settings.zsh"
 fi
+
+SETTINGS="$SCRIPT_DIR/config/am-settings.zsh"
+if [[ -f "$SETTINGS" ]]; then
+  mkdir -p "$HOME/.config/am-p10k-zsh-config"
+  cp "$SETTINGS" "$HOME/.config/am-p10k-zsh-config/am-settings.zsh"
+fi
 touch "$ZSHRC"
 
 if ! grep -Fq 'source "$HOME/.p10k.zsh"' "$ZSHRC"; then
